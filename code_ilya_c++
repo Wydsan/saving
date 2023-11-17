@@ -1,1 +1,22 @@
+int main() //massive with randomize
+{
+    int scale, min, max;
+    cout<< "size massive= ";
+    cin>> scale;
+    cout<< "minimum  chislo= ";
+    cin>> min;
+    cout<< "maximum  chislo= ";
+    cin>> max;  max*=1.5;
+    int mult = 1;
+    int x[scale];
+    srand(time(0));
+    int seed = rand()%1000 - 500;
+    for (int i =0; i <scale;i++){
+        srand(seed+i);
+        x[i]= rand() %max - min;
+        cout<<x[i]<<" ";
+    }
+
+    return 0;
+}
 
