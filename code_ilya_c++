@@ -18,5 +18,28 @@ int main()                         //massive with randomize
     }
 
     return 0;
-}
+} //////////////////////////////////////////////
 
+
+#include <stdlib.h>          //sort massive
+#include <iostream>
+using namespace std;
+int main()
+{
+    int i,n,t;  cout<< "n=";    cin>>n;
+    cout<<endl<< "massive"<<endl;
+    int *p = new int[n];
+    for (i=0;i<n;i++){
+        p[i]=rand()%11-5; cout<<p[i]<<" ";
+    }
+    for(i=0;i<n - 1;i++)
+        for(int j=0;j<n- i - 1;j++){
+            if(p[j]>p[j+ 1]){
+                t=p[j]; p[j]=p[j+ 1];   p[j + 1]=t;
+            }
+        }
+    cout<<"\nSort: \n";
+    for(i=0;i<n;i++){cout<<p[i]<<" ";}
+    delete []p;
+    return 0;
+}
