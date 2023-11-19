@@ -1,4 +1,4 @@
-int main()                         //massive with randomize
+int main()                                              //massive with randomize
 {
     int scale, min, max;
     cout<< "size massive= ";
@@ -16,12 +16,11 @@ int main()                         //massive with randomize
         x[i]= rand() %max - min;
         cout<<x[i]<<" ";
     }
-
     return 0;
-} //////////////////////////////////////////////
+}
+//////////////////////////////////////////////
 
-
-#include <stdlib.h>          //sort massive
+#include <stdlib.h>                                  //sort massive
 #include <iostream>
 using namespace std;
 int main()
@@ -43,3 +42,11 @@ int main()
     delete []p;
     return 0;
 }
+//////////////////////////////////////
+
+ bool ok= 0; int nom;                            последнийй элемент в массиве
+    for (int i=n- 1;i>=0;--i)
+        if(a[i]<0){ok=1; nom=i;break; }
+    if(ok) {cout<< "\na["<<nom+1<<"]= "<<a[nom]}
+        else cout << "there is no such element1";
+        return 0;
