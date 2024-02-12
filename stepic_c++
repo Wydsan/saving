@@ -1,1 +1,30 @@
-Нужно определить зарплату служащего компании. Пользователь вводит количество отработанных часов (целое) и почасовой тариф (вещественное). Компания платит обычную зарплату за первые 40 часов и полуторную зарплату за все время, отработанное сверх 40 часов.
+@Нужно определить зарплату служащего компании. Пользователь вводит количество отработанных часов (целое) и почасовой тариф (вещественное). Компания платит обычную зарплату за первые 40 часов и полуторную зарплату за все время, отработанное сверх 40 часов.
+#include <iostream>
+#include <iomanip>
+int main() {
+    int hours;
+    double hourlyRate, salary;
+
+    std::cout << "Enter the number of hours worked: ";
+    std::cin >> hours;
+
+    std::cout << "Enter the hourly rate: ";
+    std::cin >> hourlyRate;
+
+    if (hours < 0 || hourlyRate < 0) {
+        std::cout << "ERROR" << std::endl;
+    } else {
+        if (hours <= 40) {
+            salary = hours * hourlyRate;
+        } else {
+            salary = 40 * hourlyRate + (hours - 40) * 1.5 * hourlyRate;
+        }
+
+        std::cout << "The employee's salary is: $" << std::fixed << std::setprecision(2) << salary << std::endl;
+    }
+    double salary_month = salary * 4.3;
+    std::cout << "The employee's salary is: $" << std::fixed << std::setprecision(2) << salary << std::endl;
+    std::cout <<"money to month $: " << std::fixed << std::setprecision(2) << salary_month << std::endl;
+    return 0;
+}
+-----------------------------------------------------------------------------------
