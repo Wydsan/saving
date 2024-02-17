@@ -8,7 +8,7 @@ int main()                                              //massive with randomize
     cout<< "maximum  chislo= ";
     cin>> max;  max*=1.5;
     int mult = 1;
-    int x[scale];
+    int x[scale];//масштаб
     srand(time(0));
     int seed = rand()%1000 - 500;
     for (int i =0; i <scale;i++){
